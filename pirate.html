@@ -19,96 +19,146 @@
         <div class="d-inline bg-info">Click on the locations to search for treasure,beware the traps.</div>
         <div class="d-inline bg-warning "id="locations">Number of locations checked is zero.</div>
         <div class="d-inline bg-warning "id="penalty">Penalty is zero.</div>
-        <div class="d-inline bg-dark text-white">Click for help.</div>
+        <button type="button" class="btn btn-secondary btn-sm" onclick="help()">Click for help.</button>
         <div class="d-inline bg-dark text-white" id="help">Help report.</div>
     </div>
     <br>
     <div style="margin-left: 20px;">
         <div class="row">
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="0" onclick="check(0)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="1" onclick="check(1)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="2" onclick="check(2)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="3" onclick="check(3)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="4" onclick="check(4)" alt="loc"
                 style="width:85px;height:85px">
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="5" onclick="check(5)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="6" onclick="check(6)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="7" onclick="check(7)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="8" onclick="check(8)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
-                style="width:85px;height:85px">
-            </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="9" onclick="check(9)" alt="loc"
                 style="width:85px;height:85px">
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="10" onclick="check(10)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="11" onclick="check(11)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="12" onclick="check(12)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="13" onclick="check(13)" alt="loc"
                 style="width:85px;height:85px">
             </div>
-            <div class="col-sm-1"><img src="treasurelocation.jpg" alt="loc"
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="14" onclick="check(14)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="15" onclick="check(15)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="16" onclick="check(16)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="17" onclick="check(17)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="18" onclick="check(18)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="19" onclick="check(19)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="20" onclick="check(20)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="21" onclick="check(21)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="22" onclick="check(22)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="23" onclick="check(23)" alt="loc"
+                style="width:85px;height:85px">
+            </div>
+            <div class="col-sm-1"><img src="treasurelocation.jpg" id="24" onclick="check(24)" alt="loc"
                 style="width:85px;height:85px">
             </div>
         </div>
     </div>
+    <script>
+        let ids = ["0", "1", "2", "3", "4", "5", "6", "7", "8",
+            "9", "10", "11", "12", "13", "14", "15", "16",
+            "17", "18", "19", "20", "21", "22", "23", "24"];
+        let checkCount=0;
+        let penalty=0;
+        let lastCheck=0;
+        let treasureLocation=5;
+        let trapLocation=18;
+        let gameOver=false;
+        function check(position){
+            let id = ids[position];
+            let image = document.getElementById(position);
+            if (position == treasureLocation) {
+                image.src = "treasurebox.jpg";   
+                gameOver=true;
+                penalty=penalty-3;             
+            } 
+            else if(position == trapLocation){
+                image.src = "treasuretrap.jpg";
+                gameOver=true;
+                penalty=penalty+4;
+            }
+            else{
+                image.src = "piratehat.jpg";
+            }
+            checkCount++;
+            penalty++;
+            document.getElementById("locations").innerHTML = "Number of locations checked is " + checkCount;
+            lastCheck=position; 
+            document.getElementById("penalty").innerHTML = "Penalty is " + penalty;          
+        }
+        function help(){
+            let row_last= lastCheck/5;
+            let col_last= lastCheck%5;
+            if(lastCheck==0 || lastCheck==6 || lastCheck==10)
+            {
+                document.getElementById("help").innerHTML = "Can Smell It";
+            }
+            else if(lastCheck==1 || lastCheck==7 || lastCheck==11 || lastCheck==15)
+            {
+                document.getElementById("help").innerHTML = "Close Matie";
+            }
+            else{
+                document.getElementById("help").innerHTML = "Step Faster";
+            }
+            penalty=penalty+2;
+            document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
+        }
+    </script>
 </body>
 </html>

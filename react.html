@@ -14,7 +14,7 @@
   <h2>Jayanth Maturu speed check</h2>
   <p id="target"> Your time</p>
   <p id="counter"> Count</p>
-  <button type="button" class="btn btn-primary"> Start Timer</button>
+  <button type="button" class="btn btn-primary" onclick="startTime()"> Start Timer</button>
   <button type="button" class="btn btn-warning" onclick="recordTime()"> React</button>
   <script>
     let reactTime = undefined;
@@ -22,6 +22,20 @@
     function recordTime() {
       reactTime = Date.now();
       console.log(reactTime);
+    }
+    function startTime() {
+      for (let i = 0; i < 9; i++) {
+        setTimeout(() => {document.getElementById('counter').innerHTML = i;}, (8 - i) * 1000);
+      }
+      setTimeout(() => {
+        if (reactTime == undefined) {
+          document.getElementById('target').innerHTML = "Too slow";
+        } else {
+          endTime = Date.now();
+          elapsedTime = endTime - reactTime;
+          document.getElementById('target').innerHTML = "Time was: " + elapsedTime;
+        }
+      }, 8000)
     }
   </script>
 </body>

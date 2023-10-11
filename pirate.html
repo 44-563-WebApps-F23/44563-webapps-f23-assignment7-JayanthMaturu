@@ -121,6 +121,7 @@
         let trapLocation=18;
         let gameOver=false;
         function check(position){
+            if(!gameOver){
             let id = ids[position];
             let image = document.getElementById(position);
             if (position == treasureLocation) {
@@ -135,29 +136,31 @@
             }
             else{
                 image.src = "piratehat.jpg";
+                penalty++;
             }
             checkCount++;
-            penalty++;
             document.getElementById("locations").innerHTML = "Number of locations checked is " + checkCount;
             lastCheck=position; 
-            document.getElementById("penalty").innerHTML = "Penalty is " + penalty;          
+            document.getElementById("penalty").innerHTML = "Penalty is " + penalty;   
+            }       
         }
         function help(){
-            let row_last= lastCheck/5;
-            let col_last= lastCheck%5;
-            if(lastCheck==0 || lastCheck==6 || lastCheck==10)
-            {
-                document.getElementById("help").innerHTML = "Can Smell It";
+            let row = Math.floor(lastCheck / 5)
+            let col = Math.floor(lastCheck % 5)
+            if (row - col === 1 || col-row === 1){
+                document.getElementById('help').innerHTML =  "Can smell it"
             }
-            else if(lastCheck==1 || lastCheck==7 || lastCheck==11 || lastCheck==15)
-            {
-                document.getElementById("help").innerHTML = "Close Matie";
+            let treas_row = Math.floor(treasureLocation/5)
+            let treas_col = Math.floor(treasureLocation % 5)
+            if (Math.abs(treas_row - row) + Math.abs(treas_col-col) === 1){
+                document.getElementById('help').innerHTML =  "Can smell it"
+            }else if(Math.abs(treas_row - row) + Math.abs(treas_col-col) === 2){
+                document.getElementById('help').innerHTML =  "Close Matie"
+            }else{
+                document.getElementById('help').innerHTML = "Step Faster"
             }
-            else{
-                document.getElementById("help").innerHTML = "Step Faster";
-            }
-            penalty=penalty+2;
-            document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
+            penalty = penalty+2
+            document.getElementById('penalty').innerHTML = "penalty is "+ penalty
         }
     </script>
 </body>

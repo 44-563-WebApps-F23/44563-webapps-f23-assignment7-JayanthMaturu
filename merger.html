@@ -37,6 +37,7 @@
 	<button onclick="addend()">Add end</button>
 	<button onclick="addFront()">Add front</button>
 	<button onclick="remove()">Remove</button>
+	<button onclick="swap()">swap</button>
 </body>
 <script>
 function addend(){
@@ -65,6 +66,19 @@ function addFront() {
 	/* add it to the container */
 	let container = document.getElementById('target')
 	container.insertBefore(element, container.firstChild);
+}
+function swap() {
+	let mergerElements = document.getElementsByClassName("merger");
+	let cont = document.getElementById("target");
+	let section1 = Math.floor(Math.random() * mergerElements.length);
+	let section2 = Math.floor(Math.random() * mergerElements.length);
+	let innerText1 = document.getElementsByClassName("merger")[section1];
+	let innerText2 = document.getElementsByClassName("merger")[section2];
+	if (mergerElements.length > 1) {
+		let temp = innerText1.innerHTML;
+		innerText1.innerHTML = innerText2.innerHTML;
+		innerText2.innerHTML = temp;
+	}
 }
 
 </script>

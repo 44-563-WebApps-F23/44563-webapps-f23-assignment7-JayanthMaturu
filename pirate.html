@@ -110,6 +110,7 @@
             </div>
         </div>
     </div>
+    <button type="button" class="btn btn-secondary btn-sm" onclick="newgame()">New Game.</button>
     <script>
         let ids = ["0", "1", "2", "3", "4", "5", "6", "7", "8",
             "9", "10", "11", "12", "13", "14", "15", "16",
@@ -117,8 +118,8 @@
         let checkCount=0;
         let penalty=0;
         let lastCheck=0;
-        let treasureLocation=5;
-        let trapLocation=18;
+        let treasureLocation=Math.round(Math.random()*25);
+        let trapLocation=Math.round(Math.random()*25);
         let gameOver=false;
         function check(position){
             if(!gameOver){
@@ -161,6 +162,13 @@
             }
             penalty = penalty+2
             document.getElementById('penalty').innerHTML = "penalty is "+ penalty
+        }
+        function newgame(){
+            penalty=0;
+            checkCount=0;
+            lastCheck=0
+            document.getElementById("locations").innerHTML = "Number of locations checked is zero.";
+            document.getElementById('penalty').innerHTML = "Penalty is zero.";
         }
     </script>
 </body>
